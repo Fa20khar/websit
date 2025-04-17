@@ -1,0 +1,367 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #0A192F;
+  color: #CCD6F6;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* General utility classes */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: #39FF14; /* Neon Green */
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #00FFFF; /* Neon Blue */
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #112240;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #39FF14; /* Neon Green */
+  border-radius: 10px;
+}
+
+/* Header & Navigation */
+header {
+  background-color: #112240;
+  padding: 1.5rem 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+nav a {
+  color: #CCD6F6;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #39FF14; /* Neon Green */
+  color: #0A192F;
+}
+
+nav a.active {
+  background-color: #00FFFF; /* Neon Blue */
+  color: #0A192F;
+}
+
+/* Section styling */
+section {
+  padding: 5rem 2rem;
+}
+
+h2 {
+  color: #39FF14; /* Neon Green */
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  color: #CCD6F6;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: slideUp 1s ease-out;
+}
+
+/* Buttons */
+button {
+  padding: 1rem 2rem;
+  background-color: #00FFFF; /* Neon Blue */
+  color: #0A192F;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #39FF14; /* Neon Green */
+}
+
+/* Input fields */
+input,
+textarea {
+  width: 100%;
+  padding: 1rem;
+  background-color: #112240;
+  color: #CCD6F6;
+  border: 1px solid #39FF14; /* Neon Green */
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #00FFFF; /* Neon Blue */
+  outline: none;
+}
+
+/* Footer */
+footer {
+  background-color: #0A192F;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+footer h3 {
+  color: #39FF14; /* Neon Green */
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+footer p {
+  color: #8892B0;
+  font-size: 0.875rem;
+}
+
+footer a {
+  color: #00FFFF; /* Neon Blue */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #39FF14; /* Neon Green */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    margin-bottom: 1rem;
+  }
+
+  section {
+    padding: 4rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  button {
+    padding: 1rem 1.5rem;
+  }
+}
+
+
+
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 3rem;
+  background-color: #112240;
+  z-index: 100;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+/* Navbar brand styling */
+.navbar-brand h1 {
+  color: #39FF14; /* Neon Green */
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Navbar links styling */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  padding-left: 0;
+}
+
+.navbar-links li {
+  margin-right: 2rem;
+}
+
+/* Navbar link styling */
+.navbar-links a {
+  display: block;
+  padding: 0.8rem 1rem;
+  text-align: center;
+  color: #CCD6F6;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect on navbar links */
+.navbar-links a:hover {
+  background-color: #39FF14; /* Neon Green */
+  color: #0A192F;
+  border: 2px solid #39FF14;
+}
+
+/* Active link styling */
+.navbar-links a.active {
+  background-color: #00FFFF; /* Neon Blue */
+  color: #0A192F;
+  border: 2px solid #00FFFF;
+}
+
+/* Hamburger menu (mobile) */
+.navbar-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.navbar-menu div {
+  height: 5px;
+  width: 100%;
+  background-color: #39FF14;
+  transition: all 0.3s ease;
+}
+
+/* Navbar menu active state (mobile) */
+.navbar-menu.open div:nth-child(1) {
+  transform: rotate(45deg);
+  top: 8px;
+}
+
+.navbar-menu.open div:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-menu.open div:nth-child(3) {
+  transform: rotate(-45deg);
+  top: -8px;
+}
+
+/* Navbar links active (mobile) */
+.navbar-links.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background-color: #112240;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 1.5rem;
+    justify-content: space-between;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-menu {
+    display: flex;
+  }
+
+  .navbar-links.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #112240;
+    padding: 1rem;
+  }
+
+  .navbar-links li {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
+
